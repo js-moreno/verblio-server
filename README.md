@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To deploy this proyect you will need use Docker and run the next commands:
 
-Things you may want to cover:
+- `docker-compose build`
+- `docker-compose run app db:create`
+- `docker-compose run app db:migrate`
+- `docker-compose run app db:seed`
 
-* Ruby version
+With this you will get a populated database and container image to run the project.
+Now you need run this command `docker-compose up` and complete server will run in http://127.0.0.1:3000/
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+You get `talks`, `speakers` and `attendees` endpoints and you can use HTTP methods to list, show, create, update and delete each one.
